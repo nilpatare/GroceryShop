@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Checkout Page</title>
+    <link rel="stylesheet" href="./../css/checkout.css">
+    <link rel="stylesheet" href="./../css/navbar.css">
+</head>
+<body>
+
+    <nav class="navbar1">
+        <div class="navdiv1">
+            <div class="logo">
+                <a href="../index.html"><img src="../images/icons/home-logo/head-logo.png" alt="Logo" id="logo"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../pages/categories.html">Categories</a></li>
+                <li><a href="../pages/about-us.html">About Us</a></li>
+                <li><a href="../pages/contactus.html">Contact Us</a></li>
+            </ul>
+        <div class="sign">
+            <button class="signin-button"><a href="../pages/signin.html">Sign In</a></button>
+            <div class="profile-container" id="profile-container">
+                <a href="../pages/user-account.html"><img src="../images/icons/home-logo/user.png" height="33px" alt="Profile" class="profile-icon" id="profile-icon"></a>
+                
+            </div>
+            <div class="cart-container">
+                <a href="../pages/cart.html"><img src="../images/icons/home-logo/shopping-cart.png" height="33px" alt="Cart" class="cart-icon" id="cart-icon"></a>
+               
+            </div>
+        </div>
+        <div class="menu">
+            <img src="../images/navbar_icons/menu.png" alt="" id="menu_right" class="icon" onclick="display_menu(); hide_menu();">
+        </div>
+        <div class="menu-left">
+            <img src="../images/navbar_icons/menu.png" alt="" id="menu_left" class="icon" onclick="hide_again()">
+        </div>
+        <div class="side_bar" id="side-bar">
+            <img src="../images/icons/home-logo/head-logo.png" alt="Logo" height="50px" style="padding: 10px;">
+            <a href="../index.html" class="ref"><div class="side_bar_links">Home</div></a>
+            <a href="../pages/categories.html"  class="ref"><div class="side_bar_links">Categories</div></a>
+            <a href="../pages/about-us.html"  class="ref"><div class="side_bar_links">About Us</div></a>
+            <a href="../pages/contactus.html"  class="ref"><div class="side_bar_links">Contact Us</div></a>
+            <a href="../pages/signin.html"  class="ref"><div class="side_bar_links">Sign In <img src="../images/navbar_icons/sign-in.png" alt="" height="20px"></div></a>
+            <div class="side_bar_links" ><a href="../pages/user-account.html"><img src="../images/icons/home-logo/user.png" height="33px" alt="Profile" class="profile-icon" id="profile-icon"></a></div>
+            <div class="side_bar_links"><a href="../pages/cart.html"><img src="../images/icons/home-logo/shopping-cart.png" height="33px" alt="Cart" class="cart-icon" id="cart-icon"></a></div>
+        </div>
+        </div>
+    </nav>
+   
+   <div class="parent">
+           <div class="container">
+        <h1 class="headline">Grocery Checkout</h1>
+
+        <!-- Order Summary -->
+        <div class="order-summary" id="order-summary">
+            <h2 class="order-title">~:Order Summary:~</h2>
+            <ul id="cart-items"></ul>
+            <p id="order-total"></p>
+            <p id="total"></p>
+        </div>
+
+        <!-- Shipping Info -->
+        <div class="shipping-info" id="shipping-info">
+            <h2 class="shipping-title">~: Shipping Information :~</h2>
+            <label for="shipping-name">Full Name:</label>
+            <input type="text" id="shipping-name" required>
+            <label for="shipping-no">Mob Number:</label>
+            <input type="text" id="shipping-no" required>
+            <label for="shipping-address">Address:</label>
+            <input type="text" id="shipping-address" required>
+            <label for="shipping-city">City:</label>
+            <input type="text" id="shipping-city" required>
+            <label for="shipping-pincode">PIN Code:</label>
+            <input type="text" id="shipping-pincode" required>
+        </div>
+
+        <!-- Billing Info -->
+        <div class="billing-info" id="billing-info">
+            <h2 class="billing-title">~: Billing Information :~</h2>
+            <label for="billing-name">Full Name:</label>
+            <input type="text" id="billing-name" required>
+            <label for="billing-no">Mob Number:</label>
+            <input type="text" id="billing-no" required>
+            <label for="billing-address">Address:</label>
+            <input type="text" id="billing-address" required>
+            <label for="billing-city">City:</label>
+            <input type="text" id="billing-city" required>
+            <label for="billing-pincode">PIN Code:</label>
+            <input type="text" id="billing-pincode" required>
+        </div>
+
+         <!-- Payment Info -->
+         <div class="payment-info" id="payment-info">
+            <h2 class="payment-title">~: Payment Information :~</h2>
+            <label for="payment-method">Payment Method:</label>
+            <select id="payment-method" required>
+                <option value="Cash-on-del">Cash on delivery</option>
+                <option value="PhonePay">PhonePay</option>
+                <option value="net-banking">Net Banking</option>
+                <option value="atm">Credit / Debit / ATM Card</option>
+            </select>
+        </div>
+
+          <!-- Buttons -->
+          <div class="buttons">
+            <a href="cart.html" id="back-to-cart-button" class="back-btn">Back to Cart</a>
+            <button id="place-order-button" class="place-btn">Place Order</button>
+        </div>
+    </div>
+
+    <footer class="footer-main">
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="footer-logo-description">
+                    <img src="../images/icons/home-logo/footer-logo.png" alt="Logo" class="footer-logo">
+                    <p>Natures Basket is your online destination for fresh and quality groceries. We provide a wide
+                        range of products to meet all your grocery needs.</p>
+                </div> <br> <br>
+                <h3 class="connect">Connect with us</h3>
+                <div class="social-media-icons">
+                    <a href="https://www.facebook.com/NaturesBasket"><img
+                            src="../images/icons/home-logo/facebook (4).png" alt="Facebook"></a>
+                    <a href="https://x.com/NaturesBasket"><img src="../images/icons/home-logo/twitter (2).png"
+                            alt="Twitter"></a>
+                    <a href="https://youtube.com/@naturesbasketrp-sg?si=geZQ2tTgiUefGg4S"><img
+                            src="../images/icons/home-logo/youtube (1).png" alt="YouTube"></a>
+                    <a href="https://www.instagram.com/naturesbasket?igsh=bjcxbXcxdjQ1NGpl"><img
+                            src="../images/icons/home-logo/instagram (3).png" alt="Instagram"></a>
+                </div>
+            </div>
+    
+            <div class="footer-section">
+                <br> <br>
+                <div class="contact-details">
+                    <h3>Contact Us</h3>
+                    <p><b>Email</b>: cs@naturesbasket.co.in</p>
+                    <p><b>Phone</b>: 8880077745</p>
+                    <p><b>Address</b>: Krishna Curve, Linking Road, Mumbai, India</p>
+                </div> <br> <br>
+    
+                <div class="payment-methods">
+                    <br>
+                    <h3>We Accept</h3>
+                    <div class="payment-icons">
+                        <img src="../images/icons/home-logo/visa.png" alt="Visa">
+                        <img src="../images/icons/home-logo/master card.png" alt="MasterCard">
+                        <img src="../images/icons/home-logo/rupay.png" alt="RuPay">
+                        <img src="../images/icons/home-logo/paytm.png" alt="Paytm">
+                    </div>
+    
+                </div>
+    
+
+            </div>
+            <div class="footer-section">
+                <br> <br>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <a href="../pages/about-us.html">About Us</a>
+                    <a href="../pages/contactus.html">Contact Us</a>
+                    <a href="../pages/terms-condition.html">Terms and Conditions</a>
+                </div>
+            </div>
+        </div>
+        
+    </footer>
+    <p id="footer-text">&copy; 2024 Grocery Shopping. All rights reserved.</p>
+   </div>
+ 
+    
+    <script src="./../js/checkout.js"></script>
+    <script src="../js/navbar.js"></script>
+
+</body>
+</html>
